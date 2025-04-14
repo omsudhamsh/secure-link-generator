@@ -1,0 +1,36 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "package.json",
+      "use": "@vercel/static-build",
+      "config": {
+        "distDir": "dist"
+      }
+    }
+  ],
+  "routes": [
+    {
+      "src": "/assets/(.*)",
+      "headers": { "cache-control": "public, max-age=31536000, immutable" },
+      "dest": "/assets/$1"
+    },
+    {
+      "src": "/(.*\\.js)",
+      "headers": { "Content-Type": "application/javascript" },
+      "dest": "/$1"
+    },
+    {
+      "src": "/(.*\\.css)",
+      "headers": { "Content-Type": "text/css" },
+      "dest": "/$1"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/index.html"
+    }
+  ],
+  "env": {
+    "VITE_APP_URL": "https://one-time-link-generator-rahul.vercel.app"
+  }
+}
