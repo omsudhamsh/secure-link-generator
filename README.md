@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # 🔐 One-Time Link Generator
 
 A minimal, secure, and easy-to-use web application to generate one-time access links for sharing sensitive information. Once a link is accessed, the information is no longer available—ensuring confidentiality and one-time visibility.
@@ -63,3 +64,6 @@ Let me know if you'd like:
 - Custom badge/header design
 
 Happy to help with any of that!
+=======
+# secure-link-generator
+>>>>>>> 5b63895ef60a927d9e2febaefc5a82ce712c293e
